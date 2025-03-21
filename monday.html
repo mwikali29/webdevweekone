@@ -1,65 +1,22 @@
-<!DOCTYPE html>
- <html>
-    <head>
-        <title>my webpage</title>
-    </head>
-    <main>
-
-        <body>
-            <footer>
-                <h1>web heading</h1>
-            <h6>ooh</h6>
-            <img src="IMG_2482.HEIC" alt="a picture of me" height="350" width="300">
-            <h7>external</h7>
-            <img src="https://www.pexels.com/photo/concrete-road-between-trees-1563356/" alt="a picture">
-            <table>
-                <table border="1">
-                <thead>
-                    <tr>
-                        <td>NAME</td>
-                        <td>AGE</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> eddy</td>
-                        <td>43</td>
-                    </tr>
-
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>NAME</td>
-                        <td>AGE</td>
-                    </tr>
-                </tfoot>
-            </table>
-            <h9>forms</h9>
-            <!--start of a form-->
-            <form action="" mention="">
-                <label for="full_name">Full Name:</label>
-                <input type="text" id="full_name" name="full_name"required placeholder="your full name">
-                <br><br>
-                <label for="email" >Email:</label>
-                <input type="email" id="email" name="email">
-                <br><br>
-                <label for="gender">Gender:</label>
-                <input type="radio" name="gender" value="female">Female
-                <input type="radio" name="gender" value="male">Male
-                <br><br>
-                <label>Hobbies</label>
-                <input type="checkox" name="travel"
+def calculate(num1, num2, operation):
+    if operation == "add":
+        return num1 + num2
+    elif operation == "subtract":
+        return num1 - num2
+    elif operation == "multiply":
+        return num1 * num2
+    elif operation == "divide":
+        if num2 != 0:
+           return num1 / num2
+        else:
+            return "math error"
+    else:
+        return "invalid operation"
     
+num1 = float(input("num1:"))
+num2 = float(input("num2:"))
+operation = (input("choose operation:")) 
 
-            </form>
-            <p>this is my first web page!</p>
-            </footer> 
-              
-            
-        </body>
-        
-    </main>
-    
-   
-    
- </html>
+result = calculate(num1,num2,operation)
+print(f"Result is{result}")
+
