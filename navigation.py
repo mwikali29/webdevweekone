@@ -1,12 +1,24 @@
- # Variables hold data
-age = 25          # int (integer)
-height = 5.75      # float (decimal)
-name = "Charlie"   # str (string)
-is_student = True  # bool (boolean)
+def calculate(num1, num2, operation):
+    if operation == "add":
+        return num1 + num2
+    elif operation == "subtract":
+        return num1 - num2
+    elif operation == "multiply":
+        return num1 * num2
+    elif operation == "divide":
+        if num2 != 0:
+           return num1 / num2
+        else:
+            return "math error"
+    else:
+        return "invalid operation"
+    
+num1 = float(input("num1:"))
+num2 = float(input("num2:"))
+operation = (input("choose operation:")) 
 
-# Printing out the values
-print("Name:", name)          # Outputs: Name: Charlie
-print("Age:", age)            # Outputs: Age: 25
-print("Height:", height)      # Outputs: Height: 5.75
-print("Is a student?", is_student)  # Outputs: Is a student? True
+result = calculate(num1,num2,operation)
+print(f"Result is{result}")
+
+ 
  
